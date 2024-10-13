@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>http//.ivanstamba.sch.id.com</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <style>
+    @import/css.html.css
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 250px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThjUvs8NmwPFG6l8bWMUzXngfL_AkgDnsquLP4VfuSZDW7hhqHwcC_a_30&s=10');
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mytitle > button {
+            width: 200px;
+            height: 50px;
+
+            background-color: transparent;
+            color: white;
+
+            border-radius: 50px;
+            border: 1px solid white;
+
+            margin-top: 10px;
+        }
+
+        .mytitle > button:hover {
+            border: 2px solid white;
+        }
+
+        .mycomment {
+            color: gray;
+        }
+
+        .mycards {
+            margin: 20px auto 0px auto;
+            width: 55%;
+            max-width: 1200px;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+
+            display: none;
+        }
+
+        .mybtns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+        .mybtns > button {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+          listing();
+        });
+
+        function listing() {
+            $.ajax({
+                type: 'GET',
+                url: '/movie',
+                data: {},
+                success: function (response) {
+                    alert(response['msg'])
+                }
+            })
+        }
+
+        function posting() {
+            $.ajax({
+                type: 'POST',
+                url: '/movie',
+                data: {sample_give: 'data'},
+                success: function (response) {
+                    alert(response['msg'])
+                }
+            });
+        }
+
+        function open_box(){
+            $('#post-box').show()
+        }
+        function close_box(){
+            $('#post-box').hide()
+        }
+    </script>
+</head>
+
+<body>
+<div class="mytitle">
+    <h1>BERSAMA TKJ SMK HKBP SIDIKALANG</h1>
+    <div class="input-group mb-3">
+           </div>
+    <div class="form-floating">
+    </div>
+    <div class="mybtns">
+    </div>
+</div>
+<div class="mycards">
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
+        <div class="col">
+            <div class="card h-100">
+                <img src="image/Ivans1.jpg"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Ibadah di gereja</h5>
+                    <p class="card-text">Ibadah dilakukan setiap hari jumat</p>
+                </div>
+            </div>
+        </div>
+<div class="col">
+            <div class="card h-100">
+                <img src="image/Ivans2.jpg"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Senam pagi</h5>
+                    <p class="card-text">anjaii</p>
+                    <p>
+                    <p class="mycomment">Mri bergabung dengan kami</p>
+                </div>
+            </div>
+        </div>
+<div class="col">
+            <div class="card h-100">
+                <img src="image/Ivans3.jpg"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Tamu dari Australia</h5>
+                    <p class="card-text">SMK HKBP SIDIKALANG</p>
+                    <p>
+                    <p class="mycomment">Pameran musik SMK HKBP SIDIKALANG </p>
+                </div>
+            </div>
+        </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="image/Ivans4.jpg"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+        </div>
+<div class="col">
+            <div class="card h-100">
+                <img src="image/Ivans5.jpg"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+        </div>
+
+<div class="col">
+            <div class="card h-100">
+                <img src="image/Ivans6.jpg"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+        </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+        </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+        </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+        </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+        </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+  <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+ <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+                        <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>           
+            <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+             <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zuNR2ymK0f-kGsJ2dfF01hNyk2V5rNCsmM3y_Od_uQ&s"
+                     class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Piagam Smk hkbp</h5>
+                    <p class="card-text"></p>SMK HKBP SIDIKALANG</p>
+                    <p class="mycomment">THANKS</p>
+                </div>
+            </div>
+            </div>
+</div>
+</body>
+
+</html>
